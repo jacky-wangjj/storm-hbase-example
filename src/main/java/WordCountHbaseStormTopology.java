@@ -12,7 +12,7 @@ public class WordCountHbaseStormTopology {
         try {
             Config config = new Config();
 //            config.setDebug(true);
-
+            //不使用storm-hbase包，只使用hbase相关api，实现自己的HBaseBolt
             TopologyBuilder builder = new TopologyBuilder();
             builder.setSpout("DataSourceSpout", new DataSourceSpout());
             builder.setBolt("SplitBolt", new SplitBolt()).shuffleGrouping("DataSourceSpout");

@@ -18,6 +18,9 @@
             <configuration>
               <transformers>
                 <transformer />
+                <transformer>
+                  <mainClass />
+                </transformer>
               </transformers>
             </configuration>
           </execution>
@@ -62,10 +65,6 @@
         <exclusion>
           <artifactId>ring-cors</artifactId>
           <groupId>ring-cors</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>disruptor</artifactId>
-          <groupId>com.lmax</groupId>
         </exclusion>
         <exclusion>
           <artifactId>log4j-api</artifactId>
